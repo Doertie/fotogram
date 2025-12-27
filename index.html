@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotogram</title>
+  <link rel="shortcut icon" href="./img/wing.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadGallery()">
+  <header class="header">
+    <h1>Fotogram</h1>
+    <a href="./doertieMustDie/index.html"><img src="./img/wing.png" alt="Rune Logo"></a>
+  </header>
+
+  <main>
+    <figure>
+      <h2>a journey into the eye of Norway</h2>
+      <figcaption id="gallery">
+        <!-- generate Images -->
+      </figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <h3>by Julian Aergert</h3>
+  </footer>
+  
+  <dialog id="myDialog" aria-labelledby="headerDialog" aria-describedby="headerDialog" tabindex="-1" closedby="any">
+    <header>
+      <button id="close_button" aria-label="Dialog close" onclick="closeDialog()" tabindex="-1">x</button>
+    </header>
+  
+    <section class="dialog_main">
+      <h3 id="headerDialog"></h3>
+      <section id="imgDialog">
+        <!-- generate Image -->
+      </section>
+    </section>
+  
+    <section class="dialog_footer">
+      <button id="imgBack" onclick="preImg()" tabindex="-1">
+        <p><i class="arrow left"></i></p>
+      </button>
+      <section id="nummberOfImg"></section>
+      <button id="imgNext" onclick="postImg()" tabindex="-1">
+        <p><i class="arrow right"></i></p>
+      </button>
+    </section>
+  </dialog>
+</body>
+<script src="./script.js"></script>
+
+</html>
