@@ -25,7 +25,7 @@ const headerDialogList = [
   "In Norway's sights",
   "Borgund Stavkirke",
   "Mirror of life",
-  "Contrast between earth and sky",
+  "Contrast between <br> earth and sky",
   "Anarchy",
   "The way to the glacier",
   "Near sognefjellet",
@@ -56,8 +56,7 @@ function openDialog(pos) {
   imgDialog.innerHTML = `<img src="./img/${imgGalleryList[pos]}">`;
   headerDialog.innerHTML = `${headerDialogList[pos]}`;
   imgIndex = pos;
-  index = imgIndex + 1;
-  nummberOfImg.innerHTML = `<h3>${index}/${imgGalleryList.length}</h3>`;
+  nummberOfImg.innerHTML = `<h3>${imgIndex + 1}/${imgGalleryList.length}</h3>`;
   releaseTabIndex();
 }
 

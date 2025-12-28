@@ -58,6 +58,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   color: aliceblue;
   font-size: 56px;
   margin: 16px 0;
@@ -67,6 +68,7 @@ h2 {
 }
 
 h3 {
+  text-align: center;
   color: aliceblue;
   font-size: 32px;
   margin: 0;
@@ -106,9 +108,11 @@ h3 {
 }
 
 #myDialog {
+  height: 850px;
   display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background: rgb(16, 22, 51);
   border-radius: 16px;
   border: 3px solid #04fcfc;
@@ -132,6 +136,7 @@ h3 {
   color: #ffffff;
   background-color: #5c7076;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 #close_button:hover {
@@ -149,13 +154,15 @@ h3 {
 }
 
 #imgDialog img {
-  width: auto;
-  height: 600px;
+  width: 500px;
+  height: auto;
   padding: 8px 32px;
 }
 
 .dialog_footer {
+  width: 300px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 16px;
 }
@@ -169,6 +176,7 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 #imgNext {
@@ -180,6 +188,7 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .arrow {
@@ -215,7 +224,7 @@ h3 {
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .header img {
@@ -223,6 +232,14 @@ h3 {
     height: 80px;
   }
 
+  #myDialog {
+    height: 840px;
+  }
+
+  #imgDialog img {
+    width: 450px;
+    height: auto;
+  }
 }
 
 @media (max-width: 760px) {
@@ -231,6 +248,7 @@ h3 {
   }
 
   h2 {
+    width: 300px;
     font-size: 24px;
     padding: 8px 0;
     margin: 0;
@@ -255,6 +273,8 @@ h3 {
   }
 
   #myDialog {
+    width: 300px;
+    height: 550px;
     padding: 8px;
   }
 
@@ -267,5 +287,9 @@ h3 {
   #headerDialog {
     font-size: 20px;
     padding: 0;
+  }
+
+  .dialog_footer {
+    width: 250px;
   }
 }
