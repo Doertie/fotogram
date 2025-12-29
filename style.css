@@ -1,14 +1,30 @@
+:root {
+  --max: 1440px;
+}
+
+html,
 body {
+  height: 100%;
   font-family: 'atomic age';
   margin: 0;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  background: rgb(16, 22, 51);
+
 }
 
 .header {
+  width: var(--max);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(16, 22, 51);
   padding: 8px 56px;
 }
 
@@ -30,18 +46,25 @@ main {
   background: rgb(20, 28, 65);
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 main figure {
-  width: 1440px;
+  width: var(--max);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
 }
 
-footer {
+.Footer {
   background: rgb(16, 22, 51);
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  width: var(--max);
   display: flex;
   justify-content: end;
   padding: 16px 32px;
@@ -109,7 +132,6 @@ h3 {
 
 #myDialog {
   height: 850px;
-  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

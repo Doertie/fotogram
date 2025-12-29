@@ -58,6 +58,7 @@ function openDialog(pos) {
   imgIndex = pos;
   nummberOfImg.innerHTML = `<h3>${imgIndex + 1}/${imgGalleryList.length}</h3>`;
   releaseTabIndex();
+  document.getElementById('body').style.overflow = "hidden";
 }
 
 function releaseTabIndex() {
@@ -70,6 +71,7 @@ function releaseTabIndex() {
 function closeDialog() {
   dialogRef.close();
   document.getElementById('myDialog').style.display = "none";
+  document.getElementById('body').style.overflow = "scroll";
   document.getElementById('myDialog').tabIndex = -1;
   document.getElementById('close_button').tabIndex = -1;
   document.getElementById('imgBack').tabIndex = -1;
@@ -94,7 +96,7 @@ function preImg() {
   headerDialog.innerHTML = '';
   nummberOfImg.innerHTML = '';
   imgIndex -= 1;
-  if (imgIndex < 0) imgIndex = imgGalleryList.length -1;
+  if (imgIndex < 0) imgIndex = imgGalleryList.length - 1;
   imgDialog.innerHTML = `<img src="./img/${imgGalleryList[imgIndex]}">`;
   headerDialog.innerHTML = `${headerDialogList[imgIndex]}`;
   index -= 1;
@@ -120,3 +122,17 @@ function openDialogEnter(e, pos) {
     openDialog(pos);
   }
 }
+
+//https://codepen.io/alexgriss/pen/mdvQXpJ
+const modalElement = document.getElementById("myDialog");
+
+const handleModalClick = ({ currentTarget, target }) => {
+  const isClickedOnBackdrop = target === currentTarget;
+
+  if (isClickedOnBackdrop) {
+    //currentTarget.close();
+    closeDialog()
+  }
+};
+
+modalElement.addEventListener("click", handleModalClick);
